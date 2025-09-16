@@ -17,4 +17,5 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: git pull --rebase https://huggingface.co/spaces/yashhgore/Search_Engine_llm main
         run: git push https://yashhgore:$HF_TOKEN@huggingface.co/spaces/yashhgore/Search_Engine_llm main
